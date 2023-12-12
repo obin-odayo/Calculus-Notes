@@ -7,7 +7,16 @@
 
 \section{Functions}
 
-A function has some input and exactly one unique output. Therefore, all functions have \emph{one-to-one correspondence}. In the expression below the function is denoted as \(f\), and the input is denoted as \((x)\) and the output is \(y\).
+\begin{tcolorbox}[colback=blue!10!white,colframe=blue!60!black,title=Main Ideas]
+    \begin{itemize}
+        \item All functions have one input and one output.
+        \item Inputs in a function can have the same output.
+        \item Inputs in a function cannot have more than one output.
+        \item Functions come in the form of \(f(x)=y\) for \(f\) is the function, \(x\) is the input, and \(y\) is the output.
+    \end{itemize}
+\end{tcolorbox}
+
+A function has some input and exactly one output. Therefore, all functions have \emph{one-to-one correspondence}. In the expression below the function is denoted as \(f\), and the input is denoted as \((x)\) and the output is \(y\).
 
 \[
     f(x) = y
@@ -39,8 +48,134 @@ For \(y_1, y_2, \cdots, y_n\) are unique outputs for \(x_1, x_2, \cdots, x_n\).
         3 & 100 \\
         \bottomrule
     \end{tabular}
+    \captionof{table}{Table of Fishes and their Weights}
+    \label{tb1}
 \end{center}
 
-Notice in \cref{ex1}, each fish has a corresponding mass. Also notice how the mass of each fish is very unique to itself, only Fish 1 can have the mass of 33. This is how functions work. The numbers corresponding to the fish are the inputs, while the masses of each fish are the output.
+Notice in \cref{ex1}, each fish has a corresponding mass. Also notice how the mass of each fish only has one value for mass. This is how functions work. The numbers corresponding to the fish are the inputs, while the masses of each fish are the output.
 
-Therefore, we can express
+Therefore, we can express \cref{tb1} as the following equations:
+
+\begin{align*}
+    \text{Fish 1:} f(1) &= 50 \\
+    \text{Fish 2:} f(2) &= 33 \\
+    \text{Fish 3:} f(3) &= 100 \\    
+\end{align*}
+
+Something to also note is that two of the fishes can have \emph{the same mass}. Take for instance we have an additional fish, Fish 4, and Fish 1 and 4 have the same mass of 50. The function still holds, since all inputs have exactly one output. Therefore,
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        Fish & Mass \\
+        \midrule
+        1 & 50 \\
+        2 & 33 \\
+        3 & 100 \\
+        4 & 50 \\
+        \bottomrule
+    \end{tabular}
+    \captionof{table}{Table of Fishes and their Weights, with Fish 4}
+\end{center}
+
+Or mathematically:
+
+\begin{align*}
+    \text{Fish 1:} f(1) &= 50 \\
+    \text{Fish 2:} f(2) &= 33 \\
+    \text{Fish 3:} f(3) &= 100 \\    
+    \text{Fish 4:} f(4) &= 50 \\    
+\end{align*}
+
+The only instance this example would not work is if one of the fishes has two masses.
+
+Say for instance, Fish 4 simultaneously has a mass of 50 and 33, which is impossible. Therefore, the table below does not show a function.
+
+\begin{center}
+    \begin{tabular}{cc}
+        \toprule
+        Fish & Mass \\
+        \midrule
+        1 & 50 \\
+        2 & 33 \\
+        3 & 100 \\
+        4 & 50, 33 \\
+        \bottomrule
+    \end{tabular}
+    \captionof{table}{Table of Fishes and their Weights Where Fish 4 has Two Weights}
+\end{center}
+
+Because,
+
+\[
+    \text{Fish 4:}f(4)\neq50\neq33
+\]
+
+The function \(f(4)\) cannot be equal to two things simultaneously.
+
+\sep
+
+In a function, the input or \(x\) is the \emph{independent variable}. While, the output or \(y\) is the \emph{dependent variable}. This is because the value of \(y\) purely depends on the value of \(x\).
+
+Let's again take for example the table of fishes in \cref{ex1}, the mass purely depends on what fish you are referring to. Therefore, if you are referring to Fish 1, then the mass is 50; if you are referring to Fish 2, then the mass is 33.
+
+\sep
+
+All possible inputs of a function is known as the \emph{domain}. While, all possible outputs of a function is known as the \emph{range}.
+
+Look at \cref{tb1} again, all possible inputs of the function are \([1,2,3]\). Since, there are three fishes. While all possible outputs of the function are \([50,33,100]\). Since, those are the weights of the fishes. Therefore the domain and range of the function is:
+
+\begin{align*}
+    \dom f &= [1,2,3]\\
+    \ran f &= [50,33,100]
+\end{align*}
+
+Note that the domain and range of a function \(f\) are denoted as \(\dom f\) and \(\ran f\), respectively.
+
+To express the domain and range of a function there are numerous ways based on notation styles.
+\begin{itemize}
+    \item Interval Notation: \([-100, \infty)\)
+    \item Set Builder Notation: \(\{x | x \geq -100\}\)
+    \item Inequality Notation: \(x \geq -100\)
+    \item Verbal Description: All numbers greater than or equal to \(100\).
+\end{itemize}
+
+For \emph{interval notation}: brackets "[" and "]" denote an inclusive interval. That is, \([1,5] \equiv 1 \leq x \leq 5\). While, parentheses "(" and ")" denote an exclusive interval. That is, \((1,5) \equiv 1 < x < 5\). Therefore, \([-100, \infty) \equiv -100 \leq x < \infty\).
+
+\begin{ex}
+    Domain and ranges of the following functions: 
+\end{ex}
+
+{\color{blue}\[
+    f(x)=x^2
+\]}
+
+Since all the possible input of the function is all real numbers then the domain must be all real numbers, \(\dom \, f = \{x|x \in \mathbb{R}\}\) \emph{set builder} or \((-\infty,\infty)\)  \emph{interval}. 
+
+However, since the output is the square of the input, therefore no negative numbers are possible, the output must be all positive real numbers, \(\ran f = \{y|y>0, x\in\mathbb{R}\}\) \emph{set builder} or \([0,\infty)\) \emph{interval} or \(y \geq 0\) \emph{inequality}.
+
+{\color{blue}\[
+    g(x)=x
+\]}
+
+Since all the possible input is all real numbers then the domain must be all real numbers, \(\dom g = \{x|x \in \mathbb{R}\}\) \emph{set builder} or \((-\infty,\infty)\)  \emph{interval}. 
+
+Also, since the output is equal to the input, then the output must be all real numbers as well,\(\ran g = \{y|y \in \mathbb{R}\}\) \emph{set builder} or \((-\infty,\infty)\)  \emph{interval}. 
+
+{\color{blue}\[
+    k(x)=\frac{1}{1+e^{-x}}
+\]}
+
+Though \(x\) is at the denominator of the function, \(e^-x+1\) does not return 0. Therefore, the domain must be all real numbers, \(\dom k = \{x|x \in \mathbb{R}\}\) \emph{set builder} or \((-\infty,\infty)\)  \emph{interval}. 
+
+However, the range of the function is 0 and 1 exclusive because no matter what value of \(x\), \(k(x)\) does not exceed or equal 0 or 1, \(\ran k = \{y | 0 < y < 1\}\) \emph{set builder} or \((0,1)\) \emph{interval} or \(0 < y < 1\) \emph{inequality}.
+
+\section{Graphing Functions}
+\begin{tcolorbox}[colback=blue!10!white,colframe=blue!60!black,title=Main Ideas]
+    \begin{itemize}
+        \item All functions have one input and one output.
+        \item Inputs in a function can have the same output.
+        \item Inputs in a function cannot have more than one output.
+        \item Functions come in the form of \(f(x)=y\) for \(f\) is the function, \(x\) is the input, and \(y\) is the output.
+    \end{itemize}
+\end{tcolorbox}
