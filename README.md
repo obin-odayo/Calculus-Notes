@@ -1,4 +1,4 @@
-# Calculus Notes
+# Notes on Differential Calculus
 By: Zhean Robby L. Ganituen ([Obin Odayo](https://github.com/obin-odayo))
 
 On: December 2023
